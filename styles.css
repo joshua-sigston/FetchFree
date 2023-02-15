@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambay&family=Prompt:wght@300;400;500&family=Ropa+Sans&display=swap');
+/* reset and custom style classes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-size: 18px;
+    font-family: var(--ff-base);
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--ff-paragraph);
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+/* background image styling */
+/* container:after {
+    content: '';
+    position: absolute;
+    background-color: var(--clr-blue-dark);
+    inset: 0;
+    z-index: -1;
+    opacity: .9; */
+    /* goes in parent selector => */
+    /* position: relative;
+    isolation: isolate;
+} */
+
+/* Root Styles */
+:root {
+    /* colors */
+    --clr-baltic-sea: #303841;
+    --clr-iris-blue: #00ADB5;
+    --clr-whisper: #EEEEEE;
+    --clr-outrageous-orng: #FF5722;
+
+    /* fonts */
+    --ff-title: 'Ropa Sans', sans-serif;
+    --ff-sub-title: 'Ropa Sans', sans-serif;
+    --ff-paragraph: 'Cambay', sans-serif;
+
+    --line-height-lrg: 62px;
+    --line-height-md: 42px;
+    --line-height-sml: 22px;
+
+    --transition: 300ms ease-in-out;
+    --transition-two: 600ms ease-in-out;
+    --transition-three: 800ms ease-in-out;
+}
+
+/* general styles */
+
+.grid {
+    width: 100%;
+    display: grid;
+    gap: 1em;
+}
+
+.flex_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.center_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center_grid {
+    width: 100%;
+    display: grid;
+    place-content: center;
+    gap: 1em;
+}
+
+.grid_responsive {
+    grid: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 100px;
+    gap: 1em;
+}
+
+.inactive {
+    display: none;
+}
+
+.opacity {
+    opacity: 1;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--clr-whisper);
+    padding: 1em;
+}
+
+.form_container {
+    min-width: 100%;
+    max-height: 8rem;
+    padding: 1em 0;
+    background-color: var(--clr-baltic-sea);
+    text-align: center;
+    gap: 1em;
+    border-radius: .5rem;
+}
+
+.form_container p {
+    color: var(--clr-whisper);
+}
+
+select, button {
+    width: 8rem;
+    height: 2rem;
+    font-family: var(--ff-sub-title);
+}
+
+button {
+    background-color: var(--clr-iris-blue);
+    border: none;
+    border-radius: .5rem;
+    transition: var(--transition);
+    box-shadow: rgba(184, 192, 199, 0.912) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.results_container {
+    margin-top: 1em;
+    border-radius: .5rem;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    margin-top: 1em;
+    border-radius: .5rem;
+    color: var(--clr-baltic-sea);
+    background-color: var(--clr-outrageous-orng);
+}
+
+.card h3 {
+    font-size: 1rem;
+}
+
+img {
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+a {
+    background-color: var(--clr-iris-blue);
+    width: 8rem;
+    padding: .5em;
+    border-radius: .5rem;
+    color: var(--clr-baltic-sea);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
